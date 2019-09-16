@@ -1,0 +1,131 @@
+<p>Cuadricula Sencilla Angular Material</p>
+
+<p>Componente 2</p>
+
+<mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile *ngFor="let Grid of grid" [colspan]="Grid.cols" [rowspan]="Grid.rows" [style.background]="Grid.color">
+        {{Grid.text}}
+    </mat-grid-tile>
+</mat-grid-list>
+
+
+<div class="Caja3">
+    <p>Menu Sencillo Angular Material</p>
+
+    <p>Componente 3</p>
+
+    <button mat-button [matMenuTriggerFor]="Animes" class="AnimeB">Animes</button>
+
+    <mat-menu #Animes="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="Accion">Accion</button>
+        <button mat-menu-item [matMenuTriggerFor]="Shonen">Shonen</button>
+        <button mat-menu-item [matMenuTriggerFor]="Drama">Drama</button>
+    </mat-menu>
+
+    <mat-menu #Accion="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="Destacados">Destacados</button>
+        <button mat-menu-item [matMenuTriggerFor]="Recientes">Recientes</button>
+        <button mat-menu-item [matMenuTriggerFor]="Culto">Culto</button>
+    </mat-menu>
+
+    <mat-menu #Shonen="matMenu">
+        <button mat-menu-item>Boku no Hero</button>
+        <button mat-menu-item>One Piece</button>
+        <button mat-menu-item>Black Clover</button>
+        <button mat-menu-item>Fairy tail</button>
+        <button mat-menu-item>Nanatsu no Taisai</button>
+        <button mat-menu-item>Naruto</button>
+        <button mat-menu-item>Gintama</button>
+    </mat-menu>
+
+    <mat-menu #Drama="matMenu">
+        <button mat-menu-item>Steins Gate</button>
+        <button mat-menu-item>Toradora</button>
+        <button mat-menu-item>Boku dake gai nai machi</button>
+        <button mat-menu-item>One piece</button>
+        <button mat-menu-item>Shingeki no kyojin</button>
+    </mat-menu>
+
+    <mat-menu #Destacados="matMenu">
+        <button mat-menu-item>One Piece</button>
+        <button mat-menu-item>Fairy tail</button>
+        <button mat-menu-item>Haiyuu</button>
+        <button mat-menu-item>Boku no Hero</button>
+    </mat-menu>
+
+    <mat-menu #Recientes="matMenu">
+        <button mat-menu-item>Boungo Strike Dogs</button>
+        <button mat-menu-item>Fire Force</button>
+        <button mat-menu-item>Kimetsu no yaiba</button>
+        <button mat-menu-item>Viland the Vikins</button>
+        <button mat-menu-item disabled>Anime temporada invierno</button>
+    </mat-menu>
+
+    <mat-menu #Culto="matMenu">
+        <button mat-menu-item>Dragon Ball z</button>
+        <button mat-menu-item>Evangelion</button>
+        <button mat-menu-item>Mirai Nikki</button>
+        <button mat-menu-item>Devil Man</button>
+        <button mat-menu-item disabled>Animes de culto</button>
+    </mat-menu>
+</div>
+
+
+<div class="Caja4">
+    <p>Form Field Angular Material</p>
+
+    <p>Componente 4</p>
+
+    <p>
+        <mat-form-field appearance="legacy">
+            <mat-label>Legacy form field</mat-label>
+            <input matInput placeholder="Placeholder">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="standard">
+            <mat-label>Standard form field</mat-label>
+            <input matInput placeholder="Placeholder">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Fill form field</mat-label>
+            <input matInput placeholder="Placeholder">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Outline form field</mat-label>
+            <input matInput placeholder="Placeholder">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+    </p>
+</div>
+
+
+
+<div class="Caja5">
+    <p>Select Basico Angular Material</p>
+
+    <p>Componente 5</p>
+
+    <mat-form-field>
+        <mat-label>Select an option</mat-label>
+        <mat-select [(value)]="seleccion">
+            <mat-option>None</mat-option>
+            <mat-option value="option1">Option 1</mat-option>
+            <mat-option value="option2">Option 2</mat-option>
+            <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <p>You selected: {{seleccion}}</p>
+</div>

@@ -1,0 +1,21 @@
+<p>Ordenar datos Angular Material</p>
+
+<p>Componente 6</p>
+
+<table matSort (matSortChange)="sortData($event)">
+    <tr>
+        <th mat-sort-header="Name">NombreAnime</th>
+        <th mat-sort-header="Genero">Generos</th>
+        <th mat-sort-header="Calificacion1">Calificacion Numerica</th>
+        <th mat-sort-header="Fecha">Fecha finalizacion</th>
+        <th mat-sort-header="Calificacion2">Calificacion(P,E,B,M)</th>
+    </tr>
+
+    <tr *ngFor="let animes of sortedData">
+        <td>{{animes.Name}}</td>
+        <td>{{animes.Genero}}</td>
+        <td>{{animes.Calificacion1}}</td>
+        <td>{{animes.Fecha}}</td>
+        <td>{{animes.Calificacion2}}</td>
+    </tr>
+</table>
